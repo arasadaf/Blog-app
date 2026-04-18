@@ -83,7 +83,7 @@ function AuthorArticles() {
   return (
     <div>
       <div className="flex justify-between items-center mb-8 bg-white/40 backdrop-blur-sm p-6 rounded-3xl border border-white/40 shadow-sm">
-        <h2 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-pink-500">
+        <h2 className="text-3xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-indigo-600 to-pink-500">
           Your Authored Articles
         </h2>
         <span className="bg-indigo-100 text-indigo-700 py-1.5 px-4 rounded-full font-bold text-sm shadow-inner">
@@ -100,7 +100,7 @@ function AuthorArticles() {
           {articles.map((article) => (
 <div key={article._id} className={`${articleCardClass} relative group/art`}>
               {article.imageUrl && (
-                <div className="w-full h-48 bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl mb-4 overflow-hidden relative shadow-inner">
+                <div className="w-full h-48 bg-linear-to-br from-purple-100 to-indigo-100 rounded-2xl mb-4 overflow-hidden relative shadow-inner">
                   <img src={article.imageUrl} alt="Cover" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute top-3 left-3">
                     <span className={tagClass}>{article.category || 'General'}</span>
@@ -121,7 +121,7 @@ function AuthorArticles() {
                 </div>
               )}
 
-              <div className="flex flex-col gap-2 flex-grow">
+              <div className="flex flex-col gap-2 grow">
                 <p className={articleTitle}>{article.title}</p>
                 <p className={articleExcerpt}>{article.content.slice(0, 100)}...</p>
                 {(article.comments || []).length > 0 && (

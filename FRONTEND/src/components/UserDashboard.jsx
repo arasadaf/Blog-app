@@ -38,7 +38,7 @@ function UserDashboard() {
             </div>
           )}
           <div className="text-center md:text-left">
-            <h1 className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-pink-500 p-1">
+            <h1 className="text-4xl font-black text-transparent bg-clip-text bg-linear-to-r from-indigo-600 to-pink-500 p-1">
               Welcome back, {currentUser?.firstName || currentUser?.name || 'Reader'}!
             </h1>
             <p className="text-gray-500 font-medium mt-1">Explore the latest brilliantly crafted stories.</p>
@@ -59,7 +59,7 @@ function UserDashboard() {
             {articles.map((article)=>(
               <Link to={`/article/${article._id}`} key={article._id} className={articleCardClass}>
                  {article.imageUrl && (
-                   <div className="w-full h-48 bg-gradient-to-br from-indigo-100 to-pink-100 rounded-2xl mb-4 overflow-hidden relative shadow-inner">
+                   <div className="w-full h-48 bg-linear-to-br from-indigo-100 to-pink-100 rounded-2xl mb-4 overflow-hidden relative shadow-inner">
                       <img src={article.imageUrl} alt="Cover" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" />
                       <div className="absolute top-3 left-3">
                          <span className={tagClass}>{article.category || 'General'}</span>

@@ -126,9 +126,9 @@ function ArticleById() {
   return (
     <div className={articlePageWrapper}>
       {article.imageUrl && (
-        <div className="w-full h-[400px] rounded-3xl overflow-hidden mb-12 shadow-2xl relative">
+        <div className="w-full h-100 rounded-3xl overflow-hidden mb-12 shadow-2xl relative">
            <img src={article.imageUrl} alt="Cover" className="w-full h-full object-cover" />
-           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-8 pb-10">
+           <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent flex items-end p-8 pb-10">
               <span className="bg-white/90 backdrop-blur text-indigo-700 px-4 py-1.5 rounded-full text-sm font-bold shadow-lg">
                 {article.category}
               </span>
@@ -185,7 +185,7 @@ function ArticleById() {
                 className={inputClass + " resize-none bg-white"}
                 placeholder="What are your thoughts?"
               />
-              <button type="submit" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold px-6 py-2.5 rounded-full self-end hover:-translate-y-0.5 shadow-lg shadow-indigo-500/30 transition-all">
+              <button type="submit" className="bg-linear-to-r from-indigo-600 to-purple-600 text-white font-bold px-6 py-2.5 rounded-full self-end hover:-translate-y-0.5 shadow-lg shadow-indigo-500/30 transition-all">
                 Publish Response
               </button>
             </form>
@@ -195,7 +195,7 @@ function ArticleById() {
         <div className="space-y-6">
           {article.comments?.map((comment, index) => (
             <div key={index} className="bg-white/40 p-6 rounded-3xl border border-gray-100/50 shadow-sm relative pl-16">
-              <div className="absolute left-6 top-6 w-10 h-10 bg-gradient-to-tr from-pink-400 to-orange-400 rounded-full flex items-center justify-center text-white font-black text-sm shadow-md">
+              <div className="absolute left-6 top-6 w-10 h-10 bg-linear-to-tr from-pink-400 to-orange-400 rounded-full flex items-center justify-center text-white font-black text-sm shadow-md">
                 {comment.user?.email?.charAt(0)?.toUpperCase() || "U"}
               </div>
               <p className="font-bold text-gray-900 mb-1">
