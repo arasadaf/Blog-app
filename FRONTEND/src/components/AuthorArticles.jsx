@@ -64,7 +64,7 @@ function AuthorArticles() {
       setError(null);
 
       try {
-        const res = await axios.get(`http://localhost:4000/author-api/articles/${userId}`, { withCredentials: true });
+        const res = await axios.get(`https://blog-app-xmhv.onrender.com/author-api/articles/${userId}`, { withCredentials: true });
         setArticles(res.data.payload || []);
       } catch (err) {
         console.error('Fetch error:', err);
@@ -153,7 +153,7 @@ function AuthorArticles() {
                     <button 
                       onClick={async () => {
                         try {
-                          const res = await axios.get(`http://localhost:4000/author-api/articles/${article._id}/comments`, { withCredentials: true });
+                          const res = await axios.get(`https://blog-app-xmhv.onrender.com/author-api/articles/${article._id}/comments`, { withCredentials: true });
                           console.log('Comments:', res.data.payload.comments);
                           alert(`Comments (${res.data.payload.comments.length}):\n\n` + 
                             res.data.payload.comments.map(c => 
