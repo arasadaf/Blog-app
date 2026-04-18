@@ -10,7 +10,7 @@ import {Toaster} from 'react-hot-toast'
 
 
 
-import ProtectedRoute from './components/protectedROUTE'
+import ProtectedRoute from './components/ProtectedRoute';
 
 import ArticleById from './components/ArticleById'
 import ErrorBoundary from './components/ErrorBoundary'
