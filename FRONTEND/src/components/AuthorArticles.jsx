@@ -31,7 +31,7 @@ function AuthorArticles() {
     if (!window.confirm(`Are you sure? ${currentStatus ? 'This will soft-delete the article (can be restored).' : 'This will restore the article.'}`)) return;
 
     try {
-      await axios.patch(`http://localhost:4000/author-api/articles/${articleId}/status`, { 
+      await axios.patch(`https://blog-app-xmhv.onrender.com/author-api/articles/${articleId}/status'`, { 
         isArticleActive: !currentStatus 
       }, { withCredentials: true });
       
